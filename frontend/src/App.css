@@ -1,0 +1,103 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.widget-container {
+  position: fixed; /* Make the widget fixed */
+  top: 20px; /* Space from the top */
+  right: 20px; /* Space from the right */
+  width: 300px; /* Set a width for the widget */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Border for the widget */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 15px; /* Padding inside the widget */
+  z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+.widget-title {
+  margin: 0 0 10px 0; /* Margin for title */
+  font-size: 18px; /* Title font size */
+}
+
+.refresh-button {
+  background-color: #007bff; /* Bootstrap blue */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 8px 12px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  margin-bottom: 10px; /* Margin below the button */
+}
+
+.refresh-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.loading-text,
+.error-text {
+  color: #ff0000; /* Red color for error text */
+}
+
+.rules-list {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.rule-item {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between name and copy button */
+  align-items: center; /* Center vertically */
+  margin-bottom: 8px; /* Margin between items */
+}
+
+.copy-button {
+  background-color: #28a745; /* Green background */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 5px 10px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.copy-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
