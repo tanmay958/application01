@@ -1,0 +1,48 @@
+name: application1
+
+services:
+  #backend service
+  database:
+    image: mongo:7.0.12
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - application1
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./backend/.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - 5000:5000
+    networks:
+      - application1
+    depends_on:
+      - database
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./frontend/.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - application1
+    ports:
+      - 5173:5173
+    command: npm run dev -- --host
+    depends_on:
+      - backend
+volumes:
+  mongo_data:
+networks:
+  application1:
+    driver: bridge

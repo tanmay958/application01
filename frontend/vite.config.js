@@ -7,6 +7,9 @@ import { defineConfig } from "vite";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  server: {
+    host: true,
+  },
   plugins: [react()],
   resolve: {
     alias: {

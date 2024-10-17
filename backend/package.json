@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "dev": "nodemon --legacy-watch index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",

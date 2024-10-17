@@ -369,6 +369,9 @@ app.post("/combine", (req, res) => {
   }
 });
 // Start the server
+app.get("/", (req, res) => {
+  res.send("hello World!!");
+});
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
